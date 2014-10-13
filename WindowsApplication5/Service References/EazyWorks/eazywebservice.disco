@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://hammer.eazyworks.com/eazywebservice.asmx?wsdl" docRef="http://hammer.eazyworks.com/eazywebservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://hammer.eazyworks.com/eazywebservice.asmx" xmlns:q1="http://eazyworks.com" binding="q1:EazyWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://hammer.eazyworks.com/eazywebservice.asmx" xmlns:q2="http://eazyworks.com" binding="q2:EazyWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

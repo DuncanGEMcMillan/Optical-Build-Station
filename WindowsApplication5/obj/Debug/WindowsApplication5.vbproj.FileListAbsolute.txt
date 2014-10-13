@@ -1,0 +1,28 @@
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\bin\Debug\Optics Station GUI.exe.config
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\bin\Debug\Optics Station GUI.exe
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\bin\Debug\Optics Station GUI.pdb
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\bin\Debug\Optics Station GUI.xml
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\Optics_Station_GUI.Resources.resources
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\WindowsApplication5.vbproj.GenerateResource.Cache
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\Optics Station GUI.exe
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\Optics Station GUI.xml
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\Optics Station GUI.pdb
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\Optics_Station_GUI.Form1.resources
+c:\users\dmcmillan\documents\visual studio 2013\Projects\WindowsApplication5\WindowsApplication5\obj\Debug\Optics Station GUI.exe.licenses
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\Optics Station GUI.exe.config
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\Optics Station GUI.exe
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\Optics Station GUI.xml
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\Optics Station GUI.pdb
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\Optics Station GUI.exe
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\Optics Station GUI.pdb
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\Optics Station GUI.xml
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\WindowsApplication5.vbprojResolveAssemblyReference.cache
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\Optics_Station_GUI.Form1.resources
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\Optics_Station_GUI.Resources.resources
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\WindowsApplication5.vbproj.GenerateResource.Cache
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\obj\Debug\Optics Station GUI.exe.licenses
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\TeeChart.dll
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\TeeChart.xml
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\NationalInstruments.Vision.Common.dll
+C:\Users\dmcmillan\Documents\Visual Studio 2013\Projects\Optical Station GUI\WindowsApplication5\bin\Debug\NationalInstruments.Vision.Common.xml

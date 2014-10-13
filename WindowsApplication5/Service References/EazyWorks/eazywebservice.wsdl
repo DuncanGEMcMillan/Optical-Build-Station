@@ -1,0 +1,2429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://eazyworks.com" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://eazyworks.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://eazyworks.com">
+      <s:element name="mGetSourceRev">
+        <s:complexType />
+      </s:element>
+      <s:element name="mGetSourceRevResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGetSourceRevResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mTestPassKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mTestPassKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mTestPassKeyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mTestPassKey_ThreadSleep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iThreadSleep" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mTestPassKey_ThreadSleepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mTestPassKey_ThreadSleepResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mUser_ValidateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mUser_ValidateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mUser_ValidateUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mLogIn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mLogInResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mLogInResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mLogOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mLogOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mLogOutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGenerateFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFileType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_arJSColm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_arCheckVals" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_oSort" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGenerateFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGenerateFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mReport_PR_StateChange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mReport_PR_StateChangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mReport_PR_StateChangeResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mJobFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mJobFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mJobFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mAppCall_mSetStepId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mAppCall_mSetStepIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mAppCall_mSetStepIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mAppCall">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mAppCallResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mAppCallResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mUploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mUploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mUploadFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_NV_JSON_Loader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_NV_JSON_LoaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_NV_JSON_LoaderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetSiteJSObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetSiteJSObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGetSiteJSObjectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mPR_GetPRsByUniqueID_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="x_sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="x_sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="x_sPRUniqueID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mPR_GetPRsByUniqueID_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mPR_GetPRsByUniqueID_XMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mPR_UpdateNVR_XML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPRUniqueID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNVName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sNewVal" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mPR_UpdateNVR_XMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mPR_UpdateNVR_XMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mWriteNVValueToPRID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mWriteNVValueToPRIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mWriteNVValueToPRIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetMultiSDTimeStats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetMultiSDTimeStatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mApp_GetMultiSDTimeStatsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetSDTimeStats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetSDTimeStatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mApp_GetSDTimeStatsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetAllFRStateChanges">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetAllFRStateChangesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mApp_GetAllFRStateChangesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetSDPriority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mApp_GetSDPriorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mApp_GetSDPriorityResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetPRSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetPRSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGetPRSummaryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFixPRPSRChain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFixPRPSRChainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFixPRPSRChainResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mCheckAllPRForward">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mCheckAllPRForwardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mCheckAllPRForwardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mCheckPR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mCheckPRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mCheckPRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetPRHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetPRHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGetPRHistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mPR_CreateGenealogy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mPR_CreateGenealogyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mPR_CreateGenealogyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mMoveFR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mMoveFRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mMoveFRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_MoveToStep">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_MoveToStepResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_MoveToStepResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_AttachParts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_AttachPartsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_AttachPartsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_New_AttachParts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_New_AttachPartsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_New_AttachPartsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_New">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_NewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_NewResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mRepositionFR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mRepositionFRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mRepositionFRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mDeleteFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mDeleteFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mDeleteFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mStartFR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mStartFRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mStartFRResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_New_CreateParts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_New_CreatePartsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_New_CreatePartsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetObjInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetObjInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGetObjInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_MakeUID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_MakeUIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_MakeUIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_MakeLot">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mFR_MakeLotResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mFR_MakeLotResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mDeleteObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mDeleteObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mDeleteObjResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mMoveObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mMoveObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mMoveObjResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mChangeObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mChangeObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mChangeObjResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mCreateObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mCreateObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mCreateObjResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGet_OBJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGet_OBJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGet_OBJResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGenerateJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_arJSColm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_arCheckVals" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_oSort" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGenerateJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGenerateJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetServerObj">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mGetServerObjResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mGetServerObjResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMaxRequestLength">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMaxRequestLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxRequestLengthResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppendChunk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="buffer" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="Offset" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AppendChunkResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DownloadChunk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Offset" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="BufferSize" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadChunkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadChunkResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileSize">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileSizeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFileSizeResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilesList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFilesListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFilesListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckFileHash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="S_o" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFileHashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckFileHashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mGetSourceRevSoapIn">
+    <wsdl:part name="parameters" element="tns:mGetSourceRev" />
+  </wsdl:message>
+  <wsdl:message name="mGetSourceRevSoapOut">
+    <wsdl:part name="parameters" element="tns:mGetSourceRevResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="mTestPassKeySoapIn">
+    <wsdl:part name="parameters" element="tns:mTestPassKey" />
+  </wsdl:message>
+  <wsdl:message name="mTestPassKeySoapOut">
+    <wsdl:part name="parameters" element="tns:mTestPassKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="mTestPassKey_ThreadSleepSoapIn">
+    <wsdl:part name="parameters" element="tns:mTestPassKey_ThreadSleep" />
+  </wsdl:message>
+  <wsdl:message name="mTestPassKey_ThreadSleepSoapOut">
+    <wsdl:part name="parameters" element="tns:mTestPassKey_ThreadSleepResponse" />
+  </wsdl:message>
+  <wsdl:message name="mUser_ValidateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:mUser_ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="mUser_ValidateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:mUser_ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="mLogInSoapIn">
+    <wsdl:part name="parameters" element="tns:mLogIn" />
+  </wsdl:message>
+  <wsdl:message name="mLogInSoapOut">
+    <wsdl:part name="parameters" element="tns:mLogInResponse" />
+  </wsdl:message>
+  <wsdl:message name="mLogOutSoapIn">
+    <wsdl:part name="parameters" element="tns:mLogOut" />
+  </wsdl:message>
+  <wsdl:message name="mLogOutSoapOut">
+    <wsdl:part name="parameters" element="tns:mLogOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGenerateFileSoapIn">
+    <wsdl:part name="parameters" element="tns:mGenerateFile" />
+  </wsdl:message>
+  <wsdl:message name="mGenerateFileSoapOut">
+    <wsdl:part name="parameters" element="tns:mGenerateFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mReport_PR_StateChangeSoapIn">
+    <wsdl:part name="parameters" element="tns:mReport_PR_StateChange" />
+  </wsdl:message>
+  <wsdl:message name="mReport_PR_StateChangeSoapOut">
+    <wsdl:part name="parameters" element="tns:mReport_PR_StateChangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="mJobFileSoapIn">
+    <wsdl:part name="parameters" element="tns:mJobFile" />
+  </wsdl:message>
+  <wsdl:message name="mJobFileSoapOut">
+    <wsdl:part name="parameters" element="tns:mJobFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mAppCall_mSetStepIdSoapIn">
+    <wsdl:part name="parameters" element="tns:mAppCall_mSetStepId" />
+  </wsdl:message>
+  <wsdl:message name="mAppCall_mSetStepIdSoapOut">
+    <wsdl:part name="parameters" element="tns:mAppCall_mSetStepIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="mAppCallSoapIn">
+    <wsdl:part name="parameters" element="tns:mAppCall" />
+  </wsdl:message>
+  <wsdl:message name="mAppCallSoapOut">
+    <wsdl:part name="parameters" element="tns:mAppCallResponse" />
+  </wsdl:message>
+  <wsdl:message name="mUploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:mUploadFile" />
+  </wsdl:message>
+  <wsdl:message name="mUploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:mUploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_NV_JSON_LoaderSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_NV_JSON_Loader" />
+  </wsdl:message>
+  <wsdl:message name="mFR_NV_JSON_LoaderSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_NV_JSON_LoaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGetSiteJSObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:mGetSiteJSObject" />
+  </wsdl:message>
+  <wsdl:message name="mGetSiteJSObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:mGetSiteJSObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="mPR_GetPRsByUniqueID_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:mPR_GetPRsByUniqueID_XML" />
+  </wsdl:message>
+  <wsdl:message name="mPR_GetPRsByUniqueID_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:mPR_GetPRsByUniqueID_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="mPR_UpdateNVR_XMLSoapIn">
+    <wsdl:part name="parameters" element="tns:mPR_UpdateNVR_XML" />
+  </wsdl:message>
+  <wsdl:message name="mPR_UpdateNVR_XMLSoapOut">
+    <wsdl:part name="parameters" element="tns:mPR_UpdateNVR_XMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="mWriteNVValueToPRIDSoapIn">
+    <wsdl:part name="parameters" element="tns:mWriteNVValueToPRID" />
+  </wsdl:message>
+  <wsdl:message name="mWriteNVValueToPRIDSoapOut">
+    <wsdl:part name="parameters" element="tns:mWriteNVValueToPRIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetMultiSDTimeStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:mApp_GetMultiSDTimeStats" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetMultiSDTimeStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:mApp_GetMultiSDTimeStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetSDTimeStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:mApp_GetSDTimeStats" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetSDTimeStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:mApp_GetSDTimeStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetAllFRStateChangesSoapIn">
+    <wsdl:part name="parameters" element="tns:mApp_GetAllFRStateChanges" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetAllFRStateChangesSoapOut">
+    <wsdl:part name="parameters" element="tns:mApp_GetAllFRStateChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetSDPrioritySoapIn">
+    <wsdl:part name="parameters" element="tns:mApp_GetSDPriority" />
+  </wsdl:message>
+  <wsdl:message name="mApp_GetSDPrioritySoapOut">
+    <wsdl:part name="parameters" element="tns:mApp_GetSDPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGetPRSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:mGetPRSummary" />
+  </wsdl:message>
+  <wsdl:message name="mGetPRSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:mGetPRSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFixPRPSRChainSoapIn">
+    <wsdl:part name="parameters" element="tns:mFixPRPSRChain" />
+  </wsdl:message>
+  <wsdl:message name="mFixPRPSRChainSoapOut">
+    <wsdl:part name="parameters" element="tns:mFixPRPSRChainResponse" />
+  </wsdl:message>
+  <wsdl:message name="mCheckAllPRForwardSoapIn">
+    <wsdl:part name="parameters" element="tns:mCheckAllPRForward" />
+  </wsdl:message>
+  <wsdl:message name="mCheckAllPRForwardSoapOut">
+    <wsdl:part name="parameters" element="tns:mCheckAllPRForwardResponse" />
+  </wsdl:message>
+  <wsdl:message name="mCheckPRSoapIn">
+    <wsdl:part name="parameters" element="tns:mCheckPR" />
+  </wsdl:message>
+  <wsdl:message name="mCheckPRSoapOut">
+    <wsdl:part name="parameters" element="tns:mCheckPRResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGetPRHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:mGetPRHistory" />
+  </wsdl:message>
+  <wsdl:message name="mGetPRHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:mGetPRHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="mPR_CreateGenealogySoapIn">
+    <wsdl:part name="parameters" element="tns:mPR_CreateGenealogy" />
+  </wsdl:message>
+  <wsdl:message name="mPR_CreateGenealogySoapOut">
+    <wsdl:part name="parameters" element="tns:mPR_CreateGenealogyResponse" />
+  </wsdl:message>
+  <wsdl:message name="mMoveFRSoapIn">
+    <wsdl:part name="parameters" element="tns:mMoveFR" />
+  </wsdl:message>
+  <wsdl:message name="mMoveFRSoapOut">
+    <wsdl:part name="parameters" element="tns:mMoveFRResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_MoveToStepSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_MoveToStep" />
+  </wsdl:message>
+  <wsdl:message name="mFR_MoveToStepSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_MoveToStepResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_AttachPartsSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_AttachParts" />
+  </wsdl:message>
+  <wsdl:message name="mFR_AttachPartsSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_AttachPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_New_AttachPartsSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_New_AttachParts" />
+  </wsdl:message>
+  <wsdl:message name="mFR_New_AttachPartsSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_New_AttachPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_NewSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_New" />
+  </wsdl:message>
+  <wsdl:message name="mFR_NewSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_NewResponse" />
+  </wsdl:message>
+  <wsdl:message name="mRepositionFRSoapIn">
+    <wsdl:part name="parameters" element="tns:mRepositionFR" />
+  </wsdl:message>
+  <wsdl:message name="mRepositionFRSoapOut">
+    <wsdl:part name="parameters" element="tns:mRepositionFRResponse" />
+  </wsdl:message>
+  <wsdl:message name="mDeleteFileSoapIn">
+    <wsdl:part name="parameters" element="tns:mDeleteFile" />
+  </wsdl:message>
+  <wsdl:message name="mDeleteFileSoapOut">
+    <wsdl:part name="parameters" element="tns:mDeleteFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mStartFRSoapIn">
+    <wsdl:part name="parameters" element="tns:mStartFR" />
+  </wsdl:message>
+  <wsdl:message name="mStartFRSoapOut">
+    <wsdl:part name="parameters" element="tns:mStartFRResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_New_CreatePartsSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_New_CreateParts" />
+  </wsdl:message>
+  <wsdl:message name="mFR_New_CreatePartsSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_New_CreatePartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGetObjInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:mGetObjInfo" />
+  </wsdl:message>
+  <wsdl:message name="mGetObjInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:mGetObjInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_MakeUIDSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_MakeUID" />
+  </wsdl:message>
+  <wsdl:message name="mFR_MakeUIDSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_MakeUIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="mFR_MakeLotSoapIn">
+    <wsdl:part name="parameters" element="tns:mFR_MakeLot" />
+  </wsdl:message>
+  <wsdl:message name="mFR_MakeLotSoapOut">
+    <wsdl:part name="parameters" element="tns:mFR_MakeLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="mDeleteObjSoapIn">
+    <wsdl:part name="parameters" element="tns:mDeleteObj" />
+  </wsdl:message>
+  <wsdl:message name="mDeleteObjSoapOut">
+    <wsdl:part name="parameters" element="tns:mDeleteObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="mMoveObjSoapIn">
+    <wsdl:part name="parameters" element="tns:mMoveObj" />
+  </wsdl:message>
+  <wsdl:message name="mMoveObjSoapOut">
+    <wsdl:part name="parameters" element="tns:mMoveObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="mChangeObjSoapIn">
+    <wsdl:part name="parameters" element="tns:mChangeObj" />
+  </wsdl:message>
+  <wsdl:message name="mChangeObjSoapOut">
+    <wsdl:part name="parameters" element="tns:mChangeObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="mCreateObjSoapIn">
+    <wsdl:part name="parameters" element="tns:mCreateObj" />
+  </wsdl:message>
+  <wsdl:message name="mCreateObjSoapOut">
+    <wsdl:part name="parameters" element="tns:mCreateObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGet_OBJSoapIn">
+    <wsdl:part name="parameters" element="tns:mGet_OBJ" />
+  </wsdl:message>
+  <wsdl:message name="mGet_OBJSoapOut">
+    <wsdl:part name="parameters" element="tns:mGet_OBJResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGenerateJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:mGenerateJSON" />
+  </wsdl:message>
+  <wsdl:message name="mGenerateJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:mGenerateJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="mGetServerObjSoapIn">
+    <wsdl:part name="parameters" element="tns:mGetServerObj" />
+  </wsdl:message>
+  <wsdl:message name="mGetServerObjSoapOut">
+    <wsdl:part name="parameters" element="tns:mGetServerObjResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxRequestLength" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRequestLengthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxRequestLengthResponse" />
+  </wsdl:message>
+  <wsdl:message name="AppendChunkSoapIn">
+    <wsdl:part name="parameters" element="tns:AppendChunk" />
+  </wsdl:message>
+  <wsdl:message name="AppendChunkSoapOut">
+    <wsdl:part name="parameters" element="tns:AppendChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadChunkSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadChunk" />
+  </wsdl:message>
+  <wsdl:message name="DownloadChunkSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSizeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileSize" />
+  </wsdl:message>
+  <wsdl:message name="GetFileSizeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFilesList" />
+  </wsdl:message>
+  <wsdl:message name="GetFilesListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFilesListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckFileHashSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckFileHash" />
+  </wsdl:message>
+  <wsdl:message name="CheckFileHashSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckFileHashResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EazyWebServiceSoap">
+    <wsdl:operation name="mGetSourceRev">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current revision of the application webservice. This value is read from the web.config and should be the same as the Rev shown in the application. "mGetSourceRev":&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mGetSourceRevSoapIn" />
+      <wsdl:output message="tns:mGetSourceRevSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test call. If you use this function it should return a string with "Hello World":&lt;br&gt;A fast way to check if the web service is working is by pressing the Invoke button (If you are still in the overview page, click the HelloWorld function to get to the Invoke button)&lt;br&gt;&lt;br&gt;For more help click the following links&lt;br&gt;&lt;a href="http://help.eazyworks.com/index.php?option=com_content&amp;view=article&amp;id=461"&gt;Help for the different SOAP functions&lt;/a&gt;&lt;br&gt;&lt;a href="http://help.eazyworks.com/index.php?option=com_content&amp;view=article&amp;id=466"&gt;SOAP API Manual&lt;/a&gt;&lt;br&gt;&lt;a href="http://help.eazyworks.com/index.php?option=com_content&amp;view=article&amp;id=324"&gt;MES Query syntax&lt;/a&gt;&lt;br&gt;&lt;a href="http://help.eazyworks.com/attachments/article/458/EZ_SOAPReader.zip" title="Download this file (EZ_SOAPReader.zip)"&gt;EZ SOAP Reader&lt;/a&gt;&lt;br&gt;Or contact us at: &lt;a href="mailto:Info@EazyWorks.com" target="_blank"&gt;Info@EazyWorks.com&lt;/a&gt;</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mTestPassKey">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test User Credentials</wsdl:documentation>
+      <wsdl:input message="tns:mTestPassKeySoapIn" />
+      <wsdl:output message="tns:mTestPassKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mTestPassKey_ThreadSleep">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Test User Credentials</wsdl:documentation>
+      <wsdl:input message="tns:mTestPassKey_ThreadSleepSoapIn" />
+      <wsdl:output message="tns:mTestPassKey_ThreadSleepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mUser_ValidateUser">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Checks if the user name and password will work to log in</wsdl:documentation>
+      <wsdl:input message="tns:mUser_ValidateUserSoapIn" />
+      <wsdl:output message="tns:mUser_ValidateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mLogIn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Auth Key</wsdl:documentation>
+      <wsdl:input message="tns:mLogInSoapIn" />
+      <wsdl:output message="tns:mLogInSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mLogOut">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kill Session</wsdl:documentation>
+      <wsdl:input message="tns:mLogOutSoapIn" />
+      <wsdl:output message="tns:mLogOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Accesses the Proxy Layer and Returns a Excel or CSV File</wsdl:documentation>
+      <wsdl:input message="tns:mGenerateFileSoapIn" />
+      <wsdl:output message="tns:mGenerateFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mReport_PR_StateChange">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Outputs and XLSX file that provides state changes of parts. &lt;br&gt;This export is filtered by a date range specified in the S_o object. &lt;br&gt;Output XLSX file is saved on the users desktop&lt;br&gt;Required: sDateStart as MM/DD/YYYY&lt;br&gt;Required: sDateEnd as MM/DD/YYYY&lt;br&gt;Filename Saved into current users Desktop\mReport_PR_StateChange\sFileName&lt;br&gt;Example:S_o = 	{"sDateStart": "11/08/2012","sDateEnd": "11/10/2012", "sFileName": "PRList.xlsx"} &lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mReport_PR_StateChangeSoapIn" />
+      <wsdl:output message="tns:mReport_PR_StateChangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mJobFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">EZFile SOAP Handeler &lt;br&gt;INPUT:s_o = {"sJob":"PR10-000000001", "sOutput":"zip", "sFile":"all","sSearch":"*.*"} &lt;br&gt;OUTPUT: [{"sFileName":"test.jpg","sBinary":[255,216,255,224.......}, {"sFileName":"test2.jpg","sBinary":[255,216,255,224.......}]</wsdl:documentation>
+      <wsdl:input message="tns:mJobFileSoapIn" />
+      <wsdl:output message="tns:mJobFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mAppCall_mSetStepId">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This will execute the mAppCall method. The sAction argument determines which method is being executed.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mAppCall_mSetStepIdSoapIn" />
+      <wsdl:output message="tns:mAppCall_mSetStepIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mAppCall">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This will execute the mAppCall method. The sAction argument determines which method is being executed.&lt;br&gt;Many of these methods can only be executed if the user has specfic rights.&lt;br&gt;Example:s_o = {&lt;br&gt;"sSOAP_Call":"mAppCall",&lt;br&gt;"sAction":"mGet_SQL_Jobs_With_Duplicate_sJob",&lt;br&gt;"bGetRefs":false,&lt;br&gt;"sFileName":"Duplicates.json"&lt;br&gt;}&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;S_o [string containing JSON formatted object - Required]: Defines all the arguments&lt;br&gt;s_o.sSOAP_Call [string - Required]: In this case it is always: mAppCall&lt;br&gt;s_o.sAction [string - Required]: The specific function you would like to execure: mAppCall&lt;br&gt;&lt;br&gt;&lt;b&gt;sAction Inputs&lt;/b&gt;&lt;br&gt;&lt;b&gt;mGet_SQL_Jobs_With_Duplicate_sJob&lt;/b&gt;&lt;br&gt;bGetRefs [boolean - Optional]: If not defined will default to false. If true it will return all the associated refs&lt;br&gt;sFileName [string - Optional]: Name for the output file.&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;iErrorCode [number]: 0 shows successful execution of writing the value to an NV for a PRID.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mAppCallSoapIn" />
+      <wsdl:output message="tns:mAppCallSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mUploadFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This will upload a file to an DC Object</wsdl:documentation>
+      <wsdl:input message="tns:mUploadFileSoapIn" />
+      <wsdl:output message="tns:mUploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_NV_JSON_Loader">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Traveler (FR) JSON data upload&lt;br&gt;INPUT:s_o = {"sFR":"FR10-000000001", "bLoad":true} &lt;br&gt; file = base64Encoded File &lt;br&gt;OUTPUT: </wsdl:documentation>
+      <wsdl:input message="tns:mFR_NV_JSON_LoaderSoapIn" />
+      <wsdl:output message="tns:mFR_NV_JSON_LoaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGetSiteJSObject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get site configuration for MES location object&lt;br&gt;INPUT:s_o = {"sLC":"LC10-000000001"} &lt;br&gt;OUTPUT: </wsdl:documentation>
+      <wsdl:input message="tns:mGetSiteJSObjectSoapIn" />
+      <wsdl:output message="tns:mGetSiteJSObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mPR_GetPRsByUniqueID_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will get all the Part Records with the specified UniqueID.&lt;br&gt;The return is an array, if no parts are found the array will be empty.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sPRUniqueID [string - Required]: The Unique ID you would like to check&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;arPR [JS Array]: Array with JSON objects for each Part Record in the system with the specified value for the sPRUniquesID.&lt;br&gt;arPR[].sPR [string]: Internal MES ID for the Part Record with the specified ID. Empty string if the Part Record cannot be found.&lt;br&gt;arPR[].sPRPartType [string]: State of the Part Record (to be able to filter out Scrapped, or any other state).&lt;br&gt;arErrors [JS Array]: If the array is empty, no errors occured. If errors occured they will be added as JSON Objects.&lt;br&gt;arErrors[].iErrorCode [number]: 0 shows successful execution of writing the value to an NV for a PRID.&lt;br&gt;arErrors[].sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;&lt;b&gt;Example return&lt;/b&gt;&lt;br&gt;{"arPR":[{"sPR":"PR13-000000001","sPRPartType":"WIP"},{"sPR":"PR13-000000002","sPRPartType":"Scrapped"}],"arErrors":[],"iErrorCode":0,"sErrorText":""}&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mPR_GetPRsByUniqueID_XMLSoapIn" />
+      <wsdl:output message="tns:mPR_GetPRsByUniqueID_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mPR_UpdateNVR_XML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will write data to a specific NV for a Part with sPRID&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sPRUniqueID [string - Required]: The Unique ID of the Part Record you would like to write to&lt;br&gt;sNVName [string - Required]: The Name of the Data Entries you would like to address&lt;br&gt;sNewVal [string - Required]: The New Value to be written to the data entry&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mPR_UpdateNVR_XMLSoapIn" />
+      <wsdl:output message="tns:mPR_UpdateNVR_XMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mWriteNVValueToPRID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will write data to a specific NV for a Part with sPRID&lt;br&gt;There are different ways to call this method&lt;br&gt;&lt;br&gt;&lt;b&gt;SINGLE VALUE INPUT&lt;/b&gt;&lt;br&gt;S_o [string containing JSON formatted object - Required]: The Unique ID of the Part, the Name of the value, and the actual value to write&lt;br&gt;S_o.sPRUniqueID [string - Required]: The Unique ID of the Part Record you would like to write to&lt;br&gt;S_o.sNVName [string - Required]: The Name of the Data Entries you would like to address&lt;br&gt;S_o.sNewVal [string - Required]: The New Value to be written to the data entry&lt;br&gt;&lt;br&gt;s_o example: This example writes the value of 0.12 to the NV with sNVName "Power mA" to Part Record with Unique ID "LV001"&lt;br&gt;{"sPRUniqueID":"LV001", "sNVName":"Power mW", "sNewVal":"0.12"}&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;S_o [string containing JSON formatted object - Required]: A traveler identifier and an Array of PRIDs with the NV values that need to be written&lt;br&gt;s_o.sFR [string - Optional]: Traveler Job Number or Traveler ID (If Traveler ID is customized, use the Traveler Job Number). If no sFR is passed in the system will try to figure our the sFR based on the UIDs of the Parts that are entered in the arPRID array&lt;br&gt;S_o.arPRID [JSON array - Required]: String containing an Array with and Array for each PRID&lt;br&gt;S_o.arPRID[] [JSON array - Required]: String containing an Array with and Array for each PRID&lt;br&gt;S_o.arPRID[][0].sPRID [string - Required]: Unique Identifier for the part you would like to write to&lt;br&gt;S_o.arPRID[][0].NVxxxx [JSON object - Required]: object containing the data that has to be written to the NV. Please note to remove the hyphen from the NV job number&lt;br&gt;S_o.arPRID[][0].NVxxxx.sNewVal [variable - Required]: The value that is actually written to the NV&lt;br&gt;&lt;br&gt;s_o example: This example writes the value of "Some sample text" to NV with Job number "NV11-000000046" to Part Record with Part ID "K005" on traveler with Job number "FR11-000000131"&lt;br&gt;{"sFR":"FR11-000000131","arPRID":[[{"sPRID":"K005","NV11000000046":{"sNewVal":"Some sample text"}}]]}&lt;br&gt;&lt;br&gt;s_o example: Same as previous example, but now 2 values are written: a numeric value of 12 to "NV11-000000050" and the same text string to "NV11-000000046"&lt;br&gt;{"sFR":"FR11-000000131","arPRID":[[{"sPRID":"K005","NV11000000046":{"sNewVal":"Some sample text"},"NV11000000050":{"sNewVal":12}}]]}&lt;br&gt;&lt;br&gt;s_o example: Same as previous example, but now data is written to 2 Part Records with Part ID "K005" and "K003"&lt;br&gt;{"sFR":"FR11-000000131","arPRID":[[{"sPRID":"K005","NV11000000046":{"sNewVal":"Some sample text"},"NV11000000050":{"sNewVal":12}}],[{"sPRID":"K003","NV11000000046":{"sNewVal":"Some more text"},"NV11000000050":{"sNewVal":13}}]]}&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;iErrorCode [number]: 0 shows successful execution of writing the value to an NV for a PRID.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mWriteNVValueToPRIDSoapIn" />
+      <wsdl:output message="tns:mWriteNVValueToPRIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetMultiSDTimeStats">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get FSR info and statistics of input step definitions.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sDateStart [Optional]: MM/DD/YYYY Date Format. Get FSR that DateTimeCreated &gt;= sDateStart&lt;br&gt;s_o.sDateEnd [Optional]: MM/DD/YYYY Date Format. Get FSR that sFSRiOut &lt;= sDateEnd&lt;br&gt;s_o.iDateStart [Optional]: MilliSeconds Format, That replace the Date Format. Get FSR that DateTimeCreated &gt;= iDateStart&lt;br&gt;s_o.iDateEnd [Optional]: MilliSeconds Format, That replace the Date Format. Get FSR that sFSRiOut &lt;= iDateEnd&lt;br&gt;s_o.oQuery [Required oQuery or arSD]: Get the arSD from the Query&lt;br&gt;s_o.arSD [Required oQuery or arSD]: Array of SD objects&lt;br&gt;s_o.arSD.sSD [Required sSD or sSDOperationNumber &amp; sSDRN]: Step Definition Numbers&lt;br&gt;s_o.arSD.sSDOperationNumber [Required sSD or sSDOperationNumber &amp; sSDRN]: Step Definition Operation Numbers&lt;br&gt;s_o.arSD.sSDRN [Required sSD or sSDOperationNumber &amp; sSDRN]: Step Definition Revision Numbers&lt;br&gt;s_o example: "S_o": {"sSD": "CT368SD03","sSDOperationNumber": "CT368SD03","sSDRN": "A","sDateStart": "01/01/2013","sDateEnd": "02/19/2013","oQuery": {"arJSColm": [{"i": 0,"sTyp": "jobname","sNm": "sJob","arJbConv": [],"oHash": {},"sFilterValue": "","sTitle": "sJob","iW": 122},{"i": 1,"sTyp": "string","sNm": "sJob","arJbConv": [],"oHash": {},"sFilterValue": "","sTitle": "sJob","iW": 122}],"arCheckVals": [{"_EZQueryItem": true,"sNm": "sSDRN","sTyp": "string","sOperation": "contains","sVal": "A","bAnd": true,"bOr": false}],"o": {"sFlowName": "SD_Flow"},"oSort": {}},"arSD": [{"sSD": "CT368SD01","sSDOperationNumber": "CT368SD01","sSDRN": "A"},{"sSD": "CT368SD02","sSDOperationNumber": "CT368SD02","sSDRN": "A"},{"sSD": "CT368SD03","sSDOperationNumber": "CT368SD03","sSDRN": "A"}]}&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"",{"oReturn":"oReturn"}}&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mApp_GetMultiSDTimeStatsSoapIn" />
+      <wsdl:output message="tns:mApp_GetMultiSDTimeStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetSDTimeStats">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get FSR info and statistics of input step definitions.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sSD [Required sSD or sSDOperationNumber &amp; sSDRN]: Step Definition Numbers&lt;br&gt;s_o.sSDOperationNumber [Required sSD or sSDOperationNumber &amp; sSDRN]: Step Definition Operation Numbers&lt;br&gt;s_o.sSDRN [Required sSD or sSDOperationNumber &amp; sSDRN]: Step Definition Revision Numbers&lt;br&gt;s_o.sDateStart [Optional]: MM/DD/YYYY Date Format. Get FSR that DateTimeCreated &gt;= sDateStart&lt;br&gt;s_o.sDateEnd [Optional]: MM/DD/YYYY Date Format. Get FSR that sFSRiOut &lt;= sDateEnd&lt;br&gt;s_o.iDateStart [Optional]: MilliSeconds Format, That replace the Date Format. Get FSR that DateTimeCreated &gt;= iDateStart&lt;br&gt;s_o.iDateEnd [Optional]: MilliSeconds Format, That replace the Date Format. Get FSR that sFSRiOut &lt;= iDateEnd&lt;br&gt;s_o example: {"sSD":"SD13-000000026","sDateStart":"01/01/2013","sDateEnd":"02/07/2013","iDateStart":1360010000000,"iDateEnd":1360101838389.21}&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"",{"oReturn":"oReturn"}}&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mApp_GetSDTimeStatsSoapIn" />
+      <wsdl:output message="tns:mApp_GetSDTimeStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetAllFRStateChanges">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get FR State Changes.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sDateStart [Optional]: MM/DD/YYYY Date Format. Get FSR that DateTimeCreated &gt;= sDateStart&lt;br&gt;s_o.sDateEnd [Optional]: MM/DD/YYYY Date Format. Get FSR that sFSRiOut &lt;= sDateEnd&lt;br&gt;s_o.iDateStart [Optional]: MilliSeconds Format, That replace the Date Format. Get FSR that DateTimeCreated &gt;= iDateStart&lt;br&gt;s_o.iDateEnd [Optional]: MilliSeconds Format, That replace the Date Format. Get FSR that sFSRiOut &lt;= iDateEnd&lt;br&gt;s_o example: {"sDateStart":"01/01/2013","sDateEnd":"02/07/2013","iDateStart":1360010000000,"iDateEnd":1360101838389.21}&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"",{"oReturn":"oReturn"}}&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mApp_GetAllFRStateChangesSoapIn" />
+      <wsdl:output message="tns:mApp_GetAllFRStateChangesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetSDPriority">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will summarize priority of input step definitions.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.arSD [JSON Array of JSON Object(s)- Required] Array with Step Definition Numbers to be prioritized&lt;br&gt;s_o example: {"arSD":[{"sSD":"SD01","sSDOperationNumber":"01","sSDRN":"A"},{"sSD":"SD02","sSDOperationNumber":"02","sSDRN":"A"}]} &lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"", {"arSDPriority":[{"iDelta":0,"arSD":[{"sSD":"SDJobNumber01","hFR":{"sFR":"sFR","iPRQty":1}}]}]}&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mApp_GetSDPrioritySoapIn" />
+      <wsdl:output message="tns:mApp_GetSDPrioritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGetPRSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will summarize a PR Record.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sSumMethod [string - Optional] String that can be used to switch between different summarize algorithms&lt;br&gt;s_o.arPR [JSON Array - Required] Array with part records that have to be summarized&lt;br&gt;s_o.arPR.sPR [string - Required] sJob for the PR record to summarize&lt;br&gt;&lt;br&gt;s_o example: {"arPR":[{"sPSUniqueID":"K001"}, {"sPR":"PR10-000000002"}]} &lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"", "arSumPR":[{"sPR":"sPR12-000000002",...}, {"sPR":"sPR12-00000003",...}]}&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mGetPRSummarySoapIn" />
+      <wsdl:output message="tns:mGetPRSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFixPRPSRChain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will fix the PSR chain for a PR in case it is broken.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sPR [string - Required] MES Internal job ID for the PR (e.g. PR12-000000123)&lt;br&gt;s_o example: {"sPR":"PR12-0000000123"}&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"", "sPR":"PR12-000000123", "PSRLinks":{oPSRLinks}}&lt;br&gt;oPSRLinks: a JSON Object for the PSR Links Test&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mFixPRPSRChainSoapIn" />
+      <wsdl:output message="tns:mFixPRPSRChainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mCheckAllPRForward">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will check all PR on broken chains.&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"", "sPR":"PR12-000000123", "PSRLinks":{oPSRLinks}}&lt;br&gt;oPSRLinks: a JSON Object for the PSR Links Test&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mCheckAllPRForwardSoapIn" />
+      <wsdl:output message="tns:mCheckAllPRForwardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mCheckPR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will perform specific checks on a PR record.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sPR [string - Required] MES Internal job ID for the PR (e.g. PR12-000000123)&lt;br&gt;s_o.arChecks [JSON Array - Required] Array with the checks that will be performed on the PR&lt;br&gt;s_o example: {"sPR":"PR12-0000000123", "arChecks":["PSRLinks"]} &lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"", "sPR":"PR12-000000123", "PSRLinks":{oPSRLinks}}&lt;br&gt;oPSRLinks: a JSON Object for the PSR Links Test&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mCheckPRSoapIn" />
+      <wsdl:output message="tns:mCheckPRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGetPRHistory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will summarize all the PSRs of a PR record.&lt;br&gt;It will result on a single history record per step (which can contain multiple PSRs).&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sSumMethod [string - Optional] String that can be used to switch between different summarize algorithms&lt;br&gt;s_o.arPR [JSON Array - Required] Array with part records that have to be summarized&lt;br&gt;s_o.arPR.sPSR [string - Optional] Last Part Step Record for this Part Recorde that was successfully updated the last time this ran (Currently not used).&lt;br&gt;s_o.arPR.sPR [string - Required] sJob for the PR record to summarize&lt;br&gt;&lt;br&gt;s_o.arPSRColumns [JSON Array - Required] Defines the columns that will be returned. Each column is a JSON object in the JSON Array.&lt;br&gt;s_o.arPSRColumns[].sNm [string - Required] The unique name that will determine the column that is added&lt;br&gt;s_o.arNVRColumns [JSON Array - Required] Defines the columns that will be returned. Each column is a JSON object in the JSON Array.&lt;br&gt;s_o.arNVRColumns[].sNm [string - Required] The unique name that will determine the column that is added&lt;br&gt;s_o example: {"arPR":[{"sPRUniqueID":"K0002"}, {"sPR":"PR10-000000002"}]} &lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":"", "arSumPSR":[{"sPSR":"sPSR12-000000029",...}, {"sPSR":"sPSR12-000000041",...}], "oPR_Summary":"{"PR12-000000002":{...}, "PR12-000000003":{...}}}&lt;br&gt;arSumPSR: a JSON array for all the compressed PSR records&lt;br&gt;oPR_Summary: a JSON Object giving a summary for all the PR objects. The sPR is the key to the summarized part object.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why there was an error. For successfull execution the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mGetPRHistorySoapIn" />
+      <wsdl:output message="tns:mGetPRHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mPR_CreateGenealogy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Early stages of development.  Customer Specific Function&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mPR_CreateGenealogySoapIn" />
+      <wsdl:output message="tns:mPR_CreateGenealogySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mMoveFR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will move a traveler. The Traveler that needs to be moved can be identified by Traveler ID, Traveler Job Number, or the PRID of one of the parts on the traveler.&lt;br&gt;When both the sFR and the PRID are defined the PRID will have the priority.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sFR [string - Required if sPRID is not defined]: Traveler Job Number or Traveler ID (If Traveler ID is customized, use the Traveler Job Number&lt;br&gt;s_o.sPRID [string - Required if sFR is not defined]: The Unique Identifier of the Part you would like to move, the system will look for the connected Traveler. sPRID takes preference over sPRID&lt;br&gt;s_o.sSF [string - Optional, default="next":  You can use "next", "prev", "last", "end", "first" or "start", "stop", and "sign-off" to handle FRs that require track-in handling. if you want to move to a specific step, use the sSF Job Number for the step. For hierarchical flows use the hierarchical presentation of SF.&lt;br&gt;&lt;br&gt;s_o.bConfirm [boolean - Optional, default=false]: Will ask for a confirmation before moving to the next step. So the traveler will not move to the next step if you set this boolean to true. You could use this to get feedback regarding the validation of the move.&lt;br&gt;s_o.bConfirmAttach [boolean - Optional, default=true]: Will give a warning message if documents are attached to the Traveler.&lt;br&gt;s_o.bNoChecks [boolean - Optional, default=false]: Will check if any required data is missing or out of spec. If this is the case the Traveler will not move to the next step.&lt;br&gt;s_o.arParts [array - Optional]: An array of one or more Part Records that will be attached to the specified sFR&lt;br&gt;&lt;b&gt;----------: arParts.sPRID : &lt;/b&gt;Part Record Unique ID [Required if not using arParts.j]&lt;br&gt;&lt;b&gt;----------: arParts.j : &lt;/b&gt;Internal Part Record Job Number [Required if not using arParts.sPRID]&lt;br&gt;&lt;b&gt;----------: arParts.q : &lt;/b&gt;Only use if moving a specified Quantity from a Non-Discrete Part. [Optional]&lt;br&gt;&lt;br&gt;s_o example: {"sFR":"", "sPRID":"SN-001", "sSF":"next", "bConfirmAttach":false,"arParts":[{"j":"PR12-000000011","q":"1"},{"j":"PR12-000000010","q":"3"}]} &lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;iErrorCode [number]: 0 shows successful execution of the Traveler Move. Any other number will indicate that the traveler did not move.&lt;br&gt;sErrorText [string]: A description showing why the Traveler did not move. For a successfull move the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mMoveFRSoapIn" />
+      <wsdl:output message="tns:mMoveFRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MoveToStep">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will move a traveler. The Traveler that needs to be moved can be identified by Traveler ID, Traveler Job Number, or the PRID of one of the parts on the traveler.&lt;br&gt;When both the sFR and the PRID are defined the PRID will have the priority.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;s_o.sFR [string - Required if sPRID is not defined]: Traveler Job Number or Traveler ID (If Traveler ID is customized, use the Traveler Job Number&lt;br&gt;s_o.sPRID [string - Required if sFR is not defined]: The Unique Identifier of the Part you would like to move, the system will look for the connected Traveler. sPRID takes preference over sPRID&lt;br&gt;s_o.sSF [string - Optional, default="next":  You can use "next", "prev", "last", "end", "first" or "start", "stop", and "sign-off" to handle FRs that require track-in handling. if you want to move to a specific step, use the sSF Job Number for the step. For hierarchical flows use the hierarchical presentation of SF.&lt;br&gt;&lt;br&gt;s_o.bConfirm [boolean - Optional, default=false]: Will ask for a confirmation before moving to the next step. So the traveler will not move to the next step if you set this boolean to true. You could use this to get feedback regarding the validation of the move.&lt;br&gt;s_o.bConfirmAttach [boolean - Optional, default=true]: Will give a warning message if documents are attached to the Traveler.&lt;br&gt;s_o.bNoChecks [boolean - Optional, default=false]: Will check if any required data is missing or out of spec. If this is the case the Traveler will not move to the next step.&lt;br&gt;s_o example: {"sFR":"", "sPRID":"SN-001", "sSF":"next", "bConfirmAttach":false} &lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation. &lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;iErrorCode [number]: 0 shows successful execution of the Traveler Move. Any other number will indicate that the traveler did not move.&lt;br&gt;sErrorText [string]: A description showing why the Traveler did not move. For a successfull move the string will be empty: ""</wsdl:documentation>
+      <wsdl:input message="tns:mFR_MoveToStepSoapIn" />
+      <wsdl:output message="tns:mFR_MoveToStepSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_AttachParts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will attach Part(s) with or without a specified quantity to an existing Traveler.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;s_O Object Explanation:&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: dtData : &lt;/b&gt;This defines the Flow Definition used to create the new Traveler. [Required]&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: sFR : &lt;/b&gt;Existing Traveler Number to attach Part Record(s) to. [Required]&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: arJobs : &lt;/b&gt;An array of one or more Part Records that will be attached to the specified sFR. [Required]&lt;br&gt;&lt;b&gt;----------: arJobs.sPRID : &lt;/b&gt;Part Record Unique ID [Required if not using arJobs.j]&lt;br&gt;&lt;b&gt;----------: arJobs.j : &lt;/b&gt;Internal Part Record Job Number [Required if not using arJobs.sPRID]&lt;br&gt;&lt;b&gt;----------: arJobs.q : &lt;/b&gt;Only use if moving a specified Quantity from a Non-Discrete Part. [Optional]&lt;br&gt;&lt;br&gt;INPUT Option 1 : {"S_o":{"dtData":null,"sFR":"FR12-000000055","arJobs":[{"j":"PR12-000000011","q":"1"},{"j":"PR12-000000010","q":"3"}]}} &lt;br&gt;---  This Option will move a specified Part Record by its Job Number "j" as well as the specified Quantity "q" to an existing Traveler "FR13-000000055".&lt;br&gt;&lt;br&gt;INPUT Option 2 : {"S_o":{"dtData":null,"sFR":"FR13-000000055","arJobs":[{"j":"PR12-000000011"},{"j":"PR12-000000010"}]}} &lt;br&gt;---  This Option will move a specified Part Record by its Job Number "j" to an existing Traveler "FR13-000000055".&lt;br&gt;&lt;br&gt;INPUT Option 3 : {"S_o":{"dtData":null,"sFR":"FR13-000000098","arJobs":[{"sPRID":"HW039"},{"sPRID":"HW038"}]}} &lt;br&gt;---  This Option will move a specified Part Record by its Unique ID "sPRID" to an existing Traveler "FR13-000000098".&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mFR_AttachPartsSoapIn" />
+      <wsdl:output message="tns:mFR_AttachPartsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New_AttachParts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Please use mFR_New as this will now handle the Attachment of Parts to a New Traveler.&lt;br&gt;&lt;br&gt;&lt;br&gt;Will start a reposition Parts to a New Traveler&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;Sample S_o&lt;/b&gt;&lt;br&gt;"S_o": {"oFD":{"sFDNumber": "FD12012","sFDRN": "A"},"arJobs": [{"sPRID": "00002","iQty": 1},{"sPRID": "00003","iQty": 1}]}&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mFR_New_AttachPartsSoapIn" />
+      <wsdl:output message="tns:mFR_New_AttachPartsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will Create or Reposition Parts to a New Traveler with the ability to write to NV's.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;s_O Object Explanation:&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: oFD : &lt;/b&gt;This defines the Flow Definition used to create the new Traveler. [Required]&lt;br&gt;&lt;b&gt;----------: oFD.sFDNumber : &lt;/b&gt;Flow Definition Number [Required]&lt;br&gt;&lt;b&gt;----------: oFD.sFDRN : &lt;/b&gt;Flow Definition Revision [Required]&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: oPD : &lt;/b&gt;Part Definition used for the Requested Part of the New Traveler [Required]&lt;br&gt;&lt;b&gt;----------: oPD.sPDPN : &lt;/b&gt;Part Definition Number [Required]&lt;br&gt;&lt;b&gt;----------: oPD.sPDRN : &lt;/b&gt;Part Definition Revision [Required]&lt;br&gt;&lt;b&gt;----------: oPD.iReqQty : &lt;/b&gt;Requested Quantity for new Traveler [Optional]&lt;br&gt;&lt;b&gt;----------: oPD.sVPSuffix : &lt;/b&gt;Only required if you want to request an alternate Part Definition State[Optional]&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: arParts : &lt;/b&gt;Contains an array of Part Records that will be either Attached or Made on the new Traveler. [Required]&lt;br&gt;&lt;b&gt;----------: arParts[i].iQty : &lt;/b&gt;Quantity of Part to make.  Descrete will be 1 Part, while Non-Discrete Part can be greater than 1 [Optional]&lt;br&gt;&lt;b&gt;----------: arParts[i].Type : &lt;/b&gt;"Make" or "Attach" - Make will create a Part Record, Attach will reposition a Part Record [Required]&lt;br&gt;&lt;b&gt;----------: arParts[i].sPRID : &lt;/b&gt;[Requred] for Type: Attach.  [Not Required] for Type: Make.  This will attach Part Record UID specified to new Traveler.&lt;br&gt;&lt;b&gt;----------: arParts[i].sVPSuffix : &lt;/b&gt;is used for to specify a specific VP Suffix used on the Part Definition [Optional]&lt;br&gt;&lt;br&gt;&lt;b&gt;----------: arParts[i]arNV : &lt;/b&gt;This contains an Array of Name-Values that you can write to.  See Below for list of NV's that are supported for write.[Optional]&lt;br&gt;&lt;b&gt;----------: arParts[i]arNV[i].NVJob : &lt;/b&gt;this is taken from the Name-Value ID.  With or without the dash. [Required]&lt;br&gt;&lt;b&gt;----------: arParts[i]arNV[i].NVValue : &lt;/b&gt;The Value you wish to write to the Name-Value Record. [Required]&lt;br&gt;&lt;b&gt;----------: arParts[i]arNV[i].NVValue *Notes: &lt;/b&gt;If Name-Value is a Unique ID type with auto-generate, then this value will be assigned regardless of the provided string. [Required]&lt;br&gt;&lt;br&gt;&lt;b&gt;s_O Sample: Create a New Traveler with both Make and Attach Parts.  Also shows writing to Name-Values.&lt;/b&gt;&lt;br&gt;{"S_o":{"oFD":{"sFDNumber":"HW01","sFDRN":"A"},"oPD":{"sPDPN":"HW","sPDRN":"A","iReqQty":1,"sVPSuffix":""},"arParts":[{"sPRID":"HW0144","iQty":1,"Type":"Make","sVPSuffix":"","arNV":[{"NVJob":"NV12000000001","NVValue":"HW0144"},{"NVJob":"NV12000000002","NVValue":"Lot-044"}]},{"sPRID":"HW0145","iQty":1,"Type":"Make","sVPSuffix":"","arNV":[{"NVJob":"NV12000000001","NVValue":"HW0145"},{"NVJob":"NV12000000002","NVValue":"Lot-044"}]},{"sPRID":"HW043","iQty":1,"Type":"Attach"},{"sPRID":"HW050","iQty":1,"Type":"Attach"},{"sPRID":"HW046","iQty":1,"Type":"Attach"}]}}&lt;br&gt;&lt;br&gt;&lt;b&gt;s_O Sample: Create a New Traveler with one Make Part.&lt;/b&gt;&lt;br&gt;{"S_o":{"oFD":{"sFDNumber":"DW01","sFDRN":"A"},"oPD":{"sPDPN":"DW","sPDRN":"A","iReqQty":1},"arParts":[{"Type":"Make"}]}&lt;br&gt;&lt;br&gt;&lt;b&gt;s_O Sample: Create a New Traveler and attach a couple Parts by UID.&lt;/b&gt;&lt;br&gt;{"S_o":{"oFD":{"sFDNumber":"DW01","sFDRN":"A"},"oPD":{"sPDPN":"DW","sPDRN":"A","iReqQty":1},"arParts":[{"Type":"Make"}]}&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Suppoorted Name-Value Types to Write:&lt;/b&gt;&lt;br&gt;Text, Number: both Text and Number string&lt;br&gt;Checkbox: true or false string&lt;br&gt;Pulldown: pulldown value string&lt;br&gt;Date, Date/Time: milliseconds string&lt;br&gt;Equipment, Consumption EQ or Part ID string&lt;br&gt;Lot, Unique ID: value in string&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mFR_NewSoapIn" />
+      <wsdl:output message="tns:mFR_NewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mRepositionFR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will move a Traveler or Parts to any other Flow or Step, jsut define the sFR and sSF job numbers&lt;br&gt;INPUT: &lt;br&gt;OUTPUT: </wsdl:documentation>
+      <wsdl:input message="tns:mRepositionFRSoapIn" />
+      <wsdl:output message="tns:mRepositionFRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteFile">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will delete the file from an other object DC or RC&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mDeleteFileSoapIn" />
+      <wsdl:output message="tns:mDeleteFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mStartFR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Function is being replaced by mFR_New.  Please convert your call to the mFR_New Method.&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mStartFRSoapIn" />
+      <wsdl:output message="tns:mStartFRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New_CreateParts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Please use mFR_New as this will now handle the Creation of Parts on a New Traveler.&lt;br&gt;&lt;br&gt;&lt;br&gt;Will start a traveler&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;Sample&lt;/b&gt;&lt;br&gt;mFR_New_CreateParts {"oFD":{"sFDNumber":"FD100", "sFDRN":"A"}, "oRP":{"sPDPN":"PD100", "sPDRN":"A", "iQty":10, "sVPSuffix":""}, "oPR":{"sType":"MakeRP", "arPR":[{"sUID":"X1", "iQty":1},{"sUID":"X1", "iQty":1}]}}&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mFR_New_CreatePartsSoapIn" />
+      <wsdl:output message="tns:mFR_New_CreatePartsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGetObjInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will get information about the specified object&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt; * x_oJSObjectRef: JSON Object that identifies the PD {"sPDPN":"PD100", "sPDRN":"A"} &lt;br&gt; * x_oJSObjectRef: JSON Object that identifies the SD {"sSDOperationNumber":"SD100", "sSDRN":"A"} &lt;br&gt; * x_oJSObjectRef: JSON Object that identifies the FD {"sFDNumber":"FD100", "sFDRN":"A"}&lt;br&gt;  * x_oJSObjectRef: {"sDCNo":"DC100", "sDCRev":"A"} &lt;br&gt; * x_oJSObjectRef: {"sCGName":"Name"}&lt;br&gt;  * x_oJSObjectRef: {"sSPName":"Name"}&lt;br&gt; sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mGetObjInfoSoapIn" />
+      <wsdl:output message="tns:mGetObjInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MakeUID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will assign batch UID to a Traveler as if batch UID were clicked&lt;br&gt;This function cannot accept UID Values as input.&lt;br&gt;Syntax should be pre-defined in the UID Name Value.&lt;br&gt;Auto-Generate not needed to be enabled in the UID Name Value.&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;sFR [Required]: string defining the FR / Traveler Number&lt;br&gt;sNV [Required]: string defining the NV Number&lt;br&gt;&lt;br&gt;&lt;b&gt;Sample S_o&lt;/b&gt;&lt;br&gt;"S_o": {"sFR": "FR1210-000003332","sNV": "NV12-000002239"}&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mFR_MakeUIDSoapIn" />
+      <wsdl:output message="tns:mFR_MakeUIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MakeLot">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will assign Lot ID to a Traveler&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;sFR [Required]: string defining the FR / Traveler Number&lt;br&gt;sNV [Required]: string defining the NV Number&lt;br&gt;sLotName [Required]: string defining the FR / Traveler Number&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mFR_MakeLotSoapIn" />
+      <wsdl:output message="tns:mFR_MakeLotSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteObj">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will delete the specified object&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mDeleteObjSoapIn" />
+      <wsdl:output message="tns:mDeleteObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mMoveObj">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will change the state of an Object&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mMoveObjSoapIn" />
+      <wsdl:output message="tns:mMoveObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mChangeObj">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will change a new Object&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mChangeObjSoapIn" />
+      <wsdl:output message="tns:mChangeObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mCreateObj">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Will create a new Object&lt;br&gt;&lt;br&gt;&lt;b&gt;INPUT&lt;/b&gt;&lt;br&gt;sUser [Required]: string defining the user&lt;br&gt;sPassKey [Required]: authorized key for this user&lt;br&gt;s_o [Required JSON Object in string notation]: Main arguments are defined within this object.&lt;br&gt;&lt;br&gt;s_o attributes:&lt;br&gt;&lt;br&gt;&lt;b&gt;OUTPUT&lt;/b&gt;&lt;br&gt;Single JSON Object in string notation.&lt;br&gt;iErrorCode [number]: 0 shows successful execution.&lt;br&gt;sErrorText [string]: A description showing why the write action was not successful. For a successfull write the string will be empty: ""&lt;br&gt;&lt;br&gt;Example return: {"iErrorCode":0,"sErrorText":""}&lt;br&gt;&lt;br&gt;</wsdl:documentation>
+      <wsdl:input message="tns:mCreateObjSoapIn" />
+      <wsdl:output message="tns:mCreateObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGet_OBJ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">mGet_OBJ&lt;br&gt;INPUT:s_o = {} &lt;br&gt;OUTPUT: </wsdl:documentation>
+      <wsdl:input message="tns:mGet_OBJSoapIn" />
+      <wsdl:output message="tns:mGet_OBJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateJSON">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This Accesses the Proxy Layer and Returns a JSON as a STRING</wsdl:documentation>
+      <wsdl:input message="tns:mGenerateJSONSoapIn" />
+      <wsdl:output message="tns:mGenerateJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mGetServerObj">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets JSON data for this Application</wsdl:documentation>
+      <wsdl:input message="tns:mGetServerObjSoapIn" />
+      <wsdl:output message="tns:mGetServerObjSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLength">
+      <wsdl:input message="tns:GetMaxRequestLengthSoapIn" />
+      <wsdl:output message="tns:GetMaxRequestLengthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AppendChunk">
+      <wsdl:input message="tns:AppendChunkSoapIn" />
+      <wsdl:output message="tns:AppendChunkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadChunk">
+      <wsdl:input message="tns:DownloadChunkSoapIn" />
+      <wsdl:output message="tns:DownloadChunkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSize">
+      <wsdl:input message="tns:GetFileSizeSoapIn" />
+      <wsdl:output message="tns:GetFileSizeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesList">
+      <wsdl:input message="tns:GetFilesListSoapIn" />
+      <wsdl:output message="tns:GetFilesListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileHash">
+      <wsdl:input message="tns:CheckFileHashSoapIn" />
+      <wsdl:output message="tns:CheckFileHashSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EazyWebServiceSoap" type="tns:EazyWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mGetSourceRev">
+      <soap:operation soapAction="http://eazyworks.com/mGetSourceRev" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://eazyworks.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mTestPassKey">
+      <soap:operation soapAction="http://eazyworks.com/mTestPassKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mTestPassKey_ThreadSleep">
+      <soap:operation soapAction="http://eazyworks.com/mTestPassKey_ThreadSleep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUser_ValidateUser">
+      <soap:operation soapAction="http://eazyworks.com/mUser_ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLogIn">
+      <soap:operation soapAction="http://eazyworks.com/mLogIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLogOut">
+      <soap:operation soapAction="http://eazyworks.com/mLogOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateFile">
+      <soap:operation soapAction="http://eazyworks.com/mGenerateFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mReport_PR_StateChange">
+      <soap:operation soapAction="http://eazyworks.com/mReport_PR_StateChange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mJobFile">
+      <soap:operation soapAction="http://eazyworks.com/mJobFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mAppCall_mSetStepId">
+      <soap:operation soapAction="http://eazyworks.com/mAppCall_mSetStepId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mAppCall">
+      <soap:operation soapAction="http://eazyworks.com/mAppCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUploadFile">
+      <soap:operation soapAction="http://eazyworks.com/mUploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_NV_JSON_Loader">
+      <soap:operation soapAction="http://eazyworks.com/mFR_NV_JSON_Loader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetSiteJSObject">
+      <soap:operation soapAction="http://eazyworks.com/mGetSiteJSObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mPR_GetPRsByUniqueID_XML">
+      <soap:operation soapAction="http://eazyworks.com/mPR_GetPRsByUniqueID_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mPR_UpdateNVR_XML">
+      <soap:operation soapAction="http://eazyworks.com/mPR_UpdateNVR_XML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mWriteNVValueToPRID">
+      <soap:operation soapAction="http://eazyworks.com/mWriteNVValueToPRID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetMultiSDTimeStats">
+      <soap:operation soapAction="http://eazyworks.com/mApp_GetMultiSDTimeStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetSDTimeStats">
+      <soap:operation soapAction="http://eazyworks.com/mApp_GetSDTimeStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetAllFRStateChanges">
+      <soap:operation soapAction="http://eazyworks.com/mApp_GetAllFRStateChanges" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetSDPriority">
+      <soap:operation soapAction="http://eazyworks.com/mApp_GetSDPriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetPRSummary">
+      <soap:operation soapAction="http://eazyworks.com/mGetPRSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFixPRPSRChain">
+      <soap:operation soapAction="http://eazyworks.com/mFixPRPSRChain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCheckAllPRForward">
+      <soap:operation soapAction="http://eazyworks.com/mCheckAllPRForward" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCheckPR">
+      <soap:operation soapAction="http://eazyworks.com/mCheckPR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetPRHistory">
+      <soap:operation soapAction="http://eazyworks.com/mGetPRHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mPR_CreateGenealogy">
+      <soap:operation soapAction="http://eazyworks.com/mPR_CreateGenealogy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mMoveFR">
+      <soap:operation soapAction="http://eazyworks.com/mMoveFR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MoveToStep">
+      <soap:operation soapAction="http://eazyworks.com/mFR_MoveToStep" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_AttachParts">
+      <soap:operation soapAction="http://eazyworks.com/mFR_AttachParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New_AttachParts">
+      <soap:operation soapAction="http://eazyworks.com/mFR_New_AttachParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New">
+      <soap:operation soapAction="http://eazyworks.com/mFR_New" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRepositionFR">
+      <soap:operation soapAction="http://eazyworks.com/mRepositionFR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteFile">
+      <soap:operation soapAction="http://eazyworks.com/mDeleteFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mStartFR">
+      <soap:operation soapAction="http://eazyworks.com/mStartFR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New_CreateParts">
+      <soap:operation soapAction="http://eazyworks.com/mFR_New_CreateParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetObjInfo">
+      <soap:operation soapAction="http://eazyworks.com/mGetObjInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MakeUID">
+      <soap:operation soapAction="http://eazyworks.com/mFR_MakeUID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MakeLot">
+      <soap:operation soapAction="http://eazyworks.com/mFR_MakeLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteObj">
+      <soap:operation soapAction="http://eazyworks.com/mDeleteObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mMoveObj">
+      <soap:operation soapAction="http://eazyworks.com/mMoveObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mChangeObj">
+      <soap:operation soapAction="http://eazyworks.com/mChangeObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCreateObj">
+      <soap:operation soapAction="http://eazyworks.com/mCreateObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGet_OBJ">
+      <soap:operation soapAction="http://eazyworks.com/mGet_OBJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateJSON">
+      <soap:operation soapAction="http://eazyworks.com/mGenerateJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetServerObj">
+      <soap:operation soapAction="http://eazyworks.com/mGetServerObj" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://eazyworks.com/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLength">
+      <soap:operation soapAction="http://eazyworks.com/GetMaxRequestLength" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendChunk">
+      <soap:operation soapAction="http://eazyworks.com/AppendChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadChunk">
+      <soap:operation soapAction="http://eazyworks.com/DownloadChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSize">
+      <soap:operation soapAction="http://eazyworks.com/GetFileSize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesList">
+      <soap:operation soapAction="http://eazyworks.com/GetFilesList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileHash">
+      <soap:operation soapAction="http://eazyworks.com/CheckFileHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EazyWebServiceSoap12" type="tns:EazyWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mGetSourceRev">
+      <soap12:operation soapAction="http://eazyworks.com/mGetSourceRev" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://eazyworks.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mTestPassKey">
+      <soap12:operation soapAction="http://eazyworks.com/mTestPassKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mTestPassKey_ThreadSleep">
+      <soap12:operation soapAction="http://eazyworks.com/mTestPassKey_ThreadSleep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUser_ValidateUser">
+      <soap12:operation soapAction="http://eazyworks.com/mUser_ValidateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLogIn">
+      <soap12:operation soapAction="http://eazyworks.com/mLogIn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mLogOut">
+      <soap12:operation soapAction="http://eazyworks.com/mLogOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateFile">
+      <soap12:operation soapAction="http://eazyworks.com/mGenerateFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mReport_PR_StateChange">
+      <soap12:operation soapAction="http://eazyworks.com/mReport_PR_StateChange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mJobFile">
+      <soap12:operation soapAction="http://eazyworks.com/mJobFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mAppCall_mSetStepId">
+      <soap12:operation soapAction="http://eazyworks.com/mAppCall_mSetStepId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mAppCall">
+      <soap12:operation soapAction="http://eazyworks.com/mAppCall" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mUploadFile">
+      <soap12:operation soapAction="http://eazyworks.com/mUploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_NV_JSON_Loader">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_NV_JSON_Loader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetSiteJSObject">
+      <soap12:operation soapAction="http://eazyworks.com/mGetSiteJSObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mPR_GetPRsByUniqueID_XML">
+      <soap12:operation soapAction="http://eazyworks.com/mPR_GetPRsByUniqueID_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mPR_UpdateNVR_XML">
+      <soap12:operation soapAction="http://eazyworks.com/mPR_UpdateNVR_XML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mWriteNVValueToPRID">
+      <soap12:operation soapAction="http://eazyworks.com/mWriteNVValueToPRID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetMultiSDTimeStats">
+      <soap12:operation soapAction="http://eazyworks.com/mApp_GetMultiSDTimeStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetSDTimeStats">
+      <soap12:operation soapAction="http://eazyworks.com/mApp_GetSDTimeStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetAllFRStateChanges">
+      <soap12:operation soapAction="http://eazyworks.com/mApp_GetAllFRStateChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mApp_GetSDPriority">
+      <soap12:operation soapAction="http://eazyworks.com/mApp_GetSDPriority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetPRSummary">
+      <soap12:operation soapAction="http://eazyworks.com/mGetPRSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFixPRPSRChain">
+      <soap12:operation soapAction="http://eazyworks.com/mFixPRPSRChain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCheckAllPRForward">
+      <soap12:operation soapAction="http://eazyworks.com/mCheckAllPRForward" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCheckPR">
+      <soap12:operation soapAction="http://eazyworks.com/mCheckPR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetPRHistory">
+      <soap12:operation soapAction="http://eazyworks.com/mGetPRHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mPR_CreateGenealogy">
+      <soap12:operation soapAction="http://eazyworks.com/mPR_CreateGenealogy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mMoveFR">
+      <soap12:operation soapAction="http://eazyworks.com/mMoveFR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MoveToStep">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_MoveToStep" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_AttachParts">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_AttachParts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New_AttachParts">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_New_AttachParts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_New" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mRepositionFR">
+      <soap12:operation soapAction="http://eazyworks.com/mRepositionFR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteFile">
+      <soap12:operation soapAction="http://eazyworks.com/mDeleteFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mStartFR">
+      <soap12:operation soapAction="http://eazyworks.com/mStartFR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_New_CreateParts">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_New_CreateParts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetObjInfo">
+      <soap12:operation soapAction="http://eazyworks.com/mGetObjInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MakeUID">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_MakeUID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mFR_MakeLot">
+      <soap12:operation soapAction="http://eazyworks.com/mFR_MakeLot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mDeleteObj">
+      <soap12:operation soapAction="http://eazyworks.com/mDeleteObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mMoveObj">
+      <soap12:operation soapAction="http://eazyworks.com/mMoveObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mChangeObj">
+      <soap12:operation soapAction="http://eazyworks.com/mChangeObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mCreateObj">
+      <soap12:operation soapAction="http://eazyworks.com/mCreateObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGet_OBJ">
+      <soap12:operation soapAction="http://eazyworks.com/mGet_OBJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGenerateJSON">
+      <soap12:operation soapAction="http://eazyworks.com/mGenerateJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mGetServerObj">
+      <soap12:operation soapAction="http://eazyworks.com/mGetServerObj" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://eazyworks.com/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRequestLength">
+      <soap12:operation soapAction="http://eazyworks.com/GetMaxRequestLength" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppendChunk">
+      <soap12:operation soapAction="http://eazyworks.com/AppendChunk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadChunk">
+      <soap12:operation soapAction="http://eazyworks.com/DownloadChunk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileSize">
+      <soap12:operation soapAction="http://eazyworks.com/GetFileSize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilesList">
+      <soap12:operation soapAction="http://eazyworks.com/GetFilesList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFileHash">
+      <soap12:operation soapAction="http://eazyworks.com/CheckFileHash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EazyWebService">
+    <wsdl:port name="EazyWebServiceSoap" binding="tns:EazyWebServiceSoap">
+      <soap:address location="http://hammer.eazyworks.com/eazywebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EazyWebServiceSoap12" binding="tns:EazyWebServiceSoap12">
+      <soap12:address location="http://hammer.eazyworks.com/eazywebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
